@@ -1,0 +1,33 @@
+@import "variables";
+
+.headline {
+  margin-top: 130px;
+  position: relative;
+  &__wrapper {
+    width: 55.6%;
+    color: $text-color-primary;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  &__header {
+    font-family: $font-family-secondary;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 110%;
+  }
+  &__content {
+    width: 380px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+  }
+  &__img {
+    position: absolute;
+    width: 73.7%;
+    height: 468px;
+    left: 363px;
+    bottom: -100px;
+  }
+}

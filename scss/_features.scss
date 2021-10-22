@@ -1,0 +1,103 @@
+@import "variables";
+
+.features {
+  margin-top: 150px;
+  &__header {
+    text-align: center;
+    width: 584px;
+    margin: 0 auto;
+    h2 {
+      font-size: 40px;
+      line-height: 130%;
+      font-weight: 700;
+      color: $text-color-primary;
+      font-family: $font-family-secondary;
+      display: block;
+    }
+    span {
+      display: block;
+      margin-top: 50px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 160%;
+      color: $text-color-secondary;
+    }
+  }
+  &__main {
+    margin-top: 100px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 20px;
+  }
+  &__item:nth-of-type(3n + 1) {
+    .item__main {
+      background-image: url(../image/bgc-1.png);
+    }
+  }
+  &__item:nth-of-type(3n + 2) {
+    .item__main {
+      background-image: url(../image/bgc-2.png);
+    }
+  }
+  &__item:nth-of-type(3n + 3) {
+    .item__main {
+      background-image: url(../image/bgc-3.png);
+    }
+  }
+  &__item {
+    display: flex;
+    .item__img {
+      width: 50%;
+      object-fit: scale-down;
+      margin-right: -30%;
+      z-index: 1;
+    }
+    .item__main {
+      background-size: cover;
+      width: 80%;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
+    .item__main-wrapper {
+      margin-right: 30px;
+      width: 220px;
+      display: flex;
+      flex-direction: column;
+    }
+    .item__header {
+      display: block;
+      margin-top: 20px;
+      font-size: 24px;
+      line-height: 130%;
+      font-family: $font-family-secondary;
+      color: $text-color-primary;
+      font-weight: 400;
+    }
+    .item__content {
+      display: block;
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 160%;
+      color: $text-color-secondary;
+      font-weight: 400;
+    }
+    .item__more {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      padding: 4px 0;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 160%;
+      text-decoration: none;
+      color: $text-color-primary;
+    }
+    .item__more:hover {
+      color: $hover-color;
+    }
+  }
+}

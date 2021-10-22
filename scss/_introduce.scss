@@ -1,0 +1,35 @@
+@import "variables";
+
+.introduce {
+  margin-top: 200px;
+  display: flex;
+  background: rgba(240, 99, 184, 0.15);
+  border-radius: 50px;
+  &__img {
+    width: 477px;
+    height: 504px;
+  }
+  &__wrapper {
+    width: 475px;
+    margin: 0 20px 0 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__header {
+    font-size: 40px;
+    line-height: 130%;
+    font-family: $font-family-secondary;
+    font-weight: 700;
+    color: $text-color-primary;
+  }
+  &__content {
+    display: block;
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: $text-color-secondary;
+  }
+}

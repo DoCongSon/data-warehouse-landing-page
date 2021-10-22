@@ -1,0 +1,93 @@
+@import "variables";
+
+.testimonials {
+  margin-top: 150px;
+  background: #9c69e2;
+  box-sizing: border-box;
+  border-radius: 50px;
+  &-wrapper {
+    padding: 110px 0 60px 90px;
+  }
+  &__header {
+    font-size: 40px;
+    line-height: 130%;
+    font-family: $font-family-secondary;
+    font-weight: 700;
+    color: white;
+  }
+  &__slides {
+    margin-top: 90px;
+    .slides {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+      gap: 40px;
+      &-item {
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 60px 70px 50px;
+        width: 650px;
+        display: flex;
+        flex-shrink: 0;
+        gap: 30px;
+        align-items: flex-start;
+        .avatar {
+          $avatar-size: 90px;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 1px solid #9c69e2;
+          width: $avatar-size;
+        }
+        .profile {
+          margin-top: 20px;
+          &__name {
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 160%;
+            letter-spacing: 0.005em;
+            color: $text-color-primary;
+            text-shadow: 0 0 2px #9c69e2;
+          }
+          &__website {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 160%;
+            letter-spacing: 0.01em;
+            color: #9c69e2;
+          }
+          &__introduce {
+            margin-top: 10px;
+            font-size: 18px;
+            line-height: 180%;
+            color: #4b5d68;
+            text-shadow: 0 0 2px #9c69e2;
+          }
+        }
+      }
+    }
+  }
+  &__slides-dot {
+    margin-top: 60px;
+    display: flex;
+    gap: 5px;
+    .dot-wrapper {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: white;
+      &--active {
+        width: 20px;
+        height: 20px;
+        background-color: #F063B8;
+        box-shadow: 0 0 5px #dfadcb;
+      }
+    }
+  }
+}
