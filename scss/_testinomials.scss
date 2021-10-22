@@ -37,6 +37,7 @@
           border-radius: 50%;
           border: 1px solid #9c69e2;
           width: $avatar-size;
+          height: $avatar-size;
         }
         .profile {
           margin-top: 20px;
@@ -78,8 +79,9 @@
       align-items: center;
     }
     .dot {
-      width: 10px;
-      height: 10px;
+      cursor: pointer;
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
       background-color: white;
       &--active {

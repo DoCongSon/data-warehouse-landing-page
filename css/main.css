@@ -395,6 +395,7 @@ body {
   border-radius: 50%;
   border: 1px solid #9c69e2;
   width: 90px;
+  height: 90px;
 }
 
 .testimonials__slides .slides-item .profile {
@@ -449,8 +450,9 @@ body {
 }
 
 .testimonials__slides-dot .dot {
-  width: 10px;
-  height: 10px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background-color: white;
 }
@@ -513,7 +515,7 @@ body {
   display: grid;
   -ms-grid-columns: 2fr 1fr 1fr 2fr;
       grid-template-columns: 2fr 1fr 1fr 2fr;
-  grid-gap: 40px;
+  grid-gap: 50px;
 }
 
 .footer__second__contact-info .footer__address {
