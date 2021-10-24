@@ -99,10 +99,33 @@ body {
   display: block;
   list-style: none;
   padding: 8px 4px;
+  position: relative;
+  overflow: hidden;
 }
 
 .header__menu-item--active .header__menu-link {
   font-weight: 800;
+}
+
+.header__menu-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: #e93e1e;
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.header__menu-item:hover::before {
+  -webkit-transform: translateX(110%);
+          transform: translateX(110%);
 }
 
 .header__menu-item:hover .header__menu-link {

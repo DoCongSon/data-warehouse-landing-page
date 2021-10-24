@@ -19,6 +19,22 @@
           font-weight: 800;
         }
       }
+      position: relative;
+      overflow: hidden;
+    }
+    &-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 4px;
+      background: $hover-color;
+      transform: translateX(-110%);
+      transition: transform 1s ease;
+    }
+    &-item:hover::before {
+      transform: translateX(110%);
     }
     &-item:hover &-link {
       color: $hover-color;
