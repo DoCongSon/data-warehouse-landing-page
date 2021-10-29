@@ -1,12 +1,10 @@
-@import "variables";
-
 .testimonials {
   margin-top: 150px;
   background: #9c69e2;
   box-sizing: border-box;
   border-radius: 50px;
   &-wrapper {
-    padding: 110px 0 60px 90px;
+    padding: 110px 90px 60px;
   }
   &__header {
     font-size: 40px;
@@ -17,10 +15,10 @@
   }
   &__slides {
     margin-top: 90px;
+    overflow-x: hidden;
     .slides {
       display: flex;
-      overflow-x: auto;
-      scrollbar-width: none;
+      transition: transform .5s linear;
       gap: 40px;
       &-item {
         background: #ffffff;
@@ -67,8 +65,12 @@
       }
     }
   }
-  &__slides-dot {
+  .slides-control {
     margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .slides-dot {
     display: flex;
     gap: 5px;
     .dot-wrapper {
@@ -87,9 +89,28 @@
       &--active {
         width: 20px;
         height: 20px;
-        background-color: #F063B8;
+        background-color: #f063b8;
         box-shadow: 0 0 5px #dfadcb;
       }
+    }
+  }
+  .slides-arrow {
+    display: flex;
+    &--prev,
+    &--next {
+      cursor: pointer;
+      margin-left: 20px;
+    }
+    &--prev:hover .arrow-icon-prev,
+    &--next:hover .arrow-icon-next{
+      color: #f063b8;
+      text-shadow: 0 0 5px #dfadcb;
+    }
+    .arrow-icon-next,
+    .arrow-icon-prev {
+      color: white;
+      font-size: 48px;
+      font-weight: bold;
     }
   }
 }

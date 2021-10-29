@@ -372,7 +372,7 @@ body {
 }
 
 .testimonials-wrapper {
-  padding: 110px 0 60px 90px;
+  padding: 110px 90px 60px;
 }
 
 .testimonials__header {
@@ -385,14 +385,17 @@ body {
 
 .testimonials__slides {
   margin-top: 90px;
+  overflow-x: hidden;
 }
 
 .testimonials__slides .slides {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-x: auto;
-  scrollbar-width: none;
+  -webkit-transition: -webkit-transform .5s linear;
+  transition: -webkit-transform .5s linear;
+  transition: transform .5s linear;
+  transition: transform .5s linear, -webkit-transform .5s linear;
   gap: 40px;
 }
 
@@ -450,15 +453,24 @@ body {
   text-shadow: 0 0 2px #9c69e2;
 }
 
-.testimonials__slides-dot {
+.testimonials .slides-control {
   margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.testimonials .slides-dot {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 5px;
 }
 
-.testimonials__slides-dot .dot-wrapper {
+.testimonials .slides-dot .dot-wrapper {
   width: 30px;
   height: 30px;
   display: -webkit-box;
@@ -472,7 +484,7 @@ body {
           align-items: center;
 }
 
-.testimonials__slides-dot .dot {
+.testimonials .slides-dot .dot {
   cursor: pointer;
   width: 15px;
   height: 15px;
@@ -480,12 +492,36 @@ body {
   background-color: white;
 }
 
-.testimonials__slides-dot .dot--active {
+.testimonials .slides-dot .dot--active {
   width: 20px;
   height: 20px;
-  background-color: #F063B8;
+  background-color: #f063b8;
   -webkit-box-shadow: 0 0 5px #dfadcb;
           box-shadow: 0 0 5px #dfadcb;
+}
+
+.testimonials .slides-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.testimonials .slides-arrow--prev, .testimonials .slides-arrow--next {
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.testimonials .slides-arrow--prev:hover .arrow-icon-prev,
+.testimonials .slides-arrow--next:hover .arrow-icon-next {
+  color: #f063b8;
+  text-shadow: 0 0 5px #dfadcb;
+}
+
+.testimonials .slides-arrow .arrow-icon-next,
+.testimonials .slides-arrow .arrow-icon-prev {
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
 }
 
 .footer {
