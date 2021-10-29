@@ -100,6 +100,7 @@
     &--next {
       cursor: pointer;
       margin-left: 20px;
+      user-select: none;
     }
     &--prev:hover .arrow-icon-prev,
     &--next:hover .arrow-icon-next{

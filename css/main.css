@@ -509,6 +509,10 @@ body {
 .testimonials .slides-arrow--prev, .testimonials .slides-arrow--next {
   cursor: pointer;
   margin-left: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .testimonials .slides-arrow--prev:hover .arrow-icon-prev,
