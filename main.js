@@ -6,25 +6,26 @@ function slide() {
   const arrDot = document.querySelectorAll(".dot");
   const item = [...arrItem];
   const dots = [...arrDot];
-  const gapLength = 40;
+  const gapLength = 38;
   const itemLength = item[0].offsetWidth + gapLength;
+  console.log("🚀 ~ file: main.js ~ line 11 ~ slide ~ itemLength", itemLength);
   const slideLength = itemLength * item.length;
   var index = 0;
   var translateX = 0;
   function activeDot(index) {
-    dots.forEach(function(dot) {
-      dot.classList.remove('dot--active');
-    })
-    dots[index].classList.add('dot--active');
+    dots.forEach(function (dot) {
+      dot.classList.remove("dot--active");
+    });
+    dots[index].classList.add("dot--active");
   }
   dots.forEach(function (dot) {
     dot.addEventListener("click", function (e) {
       index = e.target.dataset.index;
-      translateX = -index*itemLength;
+      translateX = -index * itemLength;
       slide.style.transform = `translateX(${translateX}px)`;
       activeDot(index);
-    })
-  })
+    });
+  });
   prevArrow.addEventListener("click", function (e) {
     handlePrevSlide();
   });

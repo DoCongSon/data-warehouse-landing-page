@@ -4,12 +4,12 @@
   background: rgba(240, 99, 184, 0.15);
   border-radius: 50px;
   &__img {
-    width: 477px;
-    height: 504px;
+    width: 38.5%;
+    object-fit: scale-down;
   }
   &__wrapper {
-    width: 475px;
-    margin: 0 20px 0 62px;
+    width: 42%;
+    margin: 20px 20px 20px 62px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,8 +26,34 @@
     display: block;
     margin-top: 40px;
     font-weight: 500;
+    text-align: justify;
     font-size: 18px;
     line-height: 160%;
     color: $text-color-secondary;
+  }
+}
+@media screen and (max-width: 769px){
+  .introduce__header {
+    font-size: 32px;
+  }
+  .introduce__content {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .introduce {
+    margin-top: 100px;
+  }
+  .introduce__img {
+    display: none;
+  }
+  .introduce__wrapper {
+    width: 100%;
+    margin: 20px;
+  }
+  .introduce__header {
+    font-size: 28pz;
+    text-align: center;
   }
 }

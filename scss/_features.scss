@@ -2,7 +2,7 @@
   margin-top: 150px;
   &__header {
     text-align: center;
-    width: 584px;
+    max-width: 584px;
     margin: 0 auto;
     h2 {
       font-size: 40px;
@@ -27,7 +27,21 @@
   &__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px 20px;
+    grid-gap: 50px 20px;
+  }
+  @media screen and (max-width: 769px) {
+    margin-top: 100px;
+    &__list {
+      grid-template-columns: 1fr;
+    }
+    &__header {
+      span {
+        margin-top: 20px;
+      }
+    }
+    &__main {
+      margin-top: 50px;
+    }
   }
   &__item:nth-of-type(3n + 1) {
     .item__main {
@@ -44,8 +58,40 @@
       background-image: url(../image/bgc-3.png);
     }
   }
+  @media screen and (max-width: 426px) {
+    .item__img {
+      display: none;
+    }
+    &__item:nth-of-type(3n + 1) {
+      .item__main {
+        background-image: unset;
+        background-color: #f6f0fc;
+      }
+    }
+    &__item:nth-of-type(3n + 2) {
+      .item__main {
+        background-image: unset;
+        background-color: #fdf0f9;
+      }
+    }
+    &__item:nth-of-type(3n + 3) {
+      .item__main {
+        background-image: unset;
+        background-color: #f0faf9;
+      }
+    }
+    .features__item .item__main {
+      width: 100%;
+      &-wrapper {
+        padding: 20px;
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
   &__item {
     display: flex;
+    justify-content: center;
     .item__img {
       width: 50%;
       object-fit: scale-down;
@@ -62,7 +108,7 @@
     }
     .item__main-wrapper {
       margin-right: 30px;
-      width: 220px;
+      width: 54%;
       display: flex;
       flex-direction: column;
     }
@@ -73,7 +119,7 @@
       line-height: 130%;
       font-family: $font-family-secondary;
       color: $text-color-primary;
-      font-weight: 400;
+      font-weight: 700;
     }
     .item__content {
       display: block;
