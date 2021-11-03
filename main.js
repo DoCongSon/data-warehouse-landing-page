@@ -62,5 +62,8 @@ function slide() {
     console.log(index);
     activeDot(index);
   }
+  setInterval(function () {
+    handleNextSlide();
+  }, 3000);
 }
 slide();
