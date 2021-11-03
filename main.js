@@ -64,6 +64,6 @@ function slide() {
   }
   setInterval(function () {
     handleNextSlide();
-  }, 3000);
+  }, 5000);
 }
 slide();
